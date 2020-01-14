@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <title>Montagem</title>
+        
+        <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+        <meta name="author" content="Mateus Miranda" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="cache-control" content="public" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="generator" content="Brackets" />
+        <meta name="rating" content="general" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+        
+        <!--Início dos arquivos de estilização, css-->
+        <link type="text/css" rel="stylesheet" href="css/montagemStyle.css">
+        <link type="text/css" rel="stylesheet" href="css/lightbox.css">
+        <link type="text/css" rel="stylesheet" href="css/checkbox.css">
+        <link type="text/css" rel="stylesheet" href="css/sizesRadio.css">
+    </head>
+
+    <body>
+        <!--Início do formulário com progress bar-->
+        <form id="msForm">
+            <div class="container">
+                <ul id="progressbar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+            <fieldset id="field1">
+            <!--Início do fieldset1 com progress bar-->
+                <div class="containerHeader">
+                    <div class="formHeader">
+                        <h2 class="fsTitle">Modelo</h2>
+                    </div>
+                    
+                    <div class="hint" id="hint1">
+                        <p>?</p>
+                    </div>
+                </div>
+
+                <!--Galeria de imagens de tortas-->
+                <div id="gallery">
+                    
+                    <div class ="pictureLeft" onclick=showImg(0)>
+                        <a href="img/dbzTorta.jpg" data-lightbox="mygallery">
+                            <img class="zoom" src="img/zoomImg.png">
+                        </a>
+                        <label>
+                            <img src="img/dbzTorta.jpg" class="smallImage">
+                            <input type="radio" name="model" value="model" class="radioB">
+                        </label>
+                        <img src="img/checked.png" class="checkedSignal">
+                    </div>
+                    
+                    <div class="pictureRight" onclick=showImg(0)>
+                        <a href="img/normalTortaChoco.jpg" data-lightbox="mygallery">
+                            <img class="zoom" src="img/zoomImg.png">
+                        </a>
+                        <label>
+                            <img src="img/normalTortaChoco.jpg" class="smallImage">
+                            <input type="radio" name="model" value="model" class="radioB">
+                        </label>
+                        <img src="img/checked.png" class="checkedSignal">
+                    </div>
+                    
+                    <div class ="pictureLeft" onclick=showImg(0)>
+                        <a href="img/tortaAndares.jpg" data-lightbox="mygallery">
+                            <img class="zoom" src="img/zoomImg.png">
+                        </a>
+                        <label>
+                            <img src="img/tortaAndares.jpg" class="smallImage">
+                            <input type="radio" name="model" value="model" class="radioB">
+                        </label>
+                        <img src="img/checked.png" class="checkedSignal">
+                    </div>
+                    
+                    <div class="pictureRight" onclick=showImg(0)>
+                        <a href="img/tortaAniver.jpg" data-lightbox="mygallery">
+                            <img class="zoom" src="img/zoomImg.png">
+                        </a>
+                        <label>
+                            <img src="img/tortaAniver.jpg" class="smallImage">
+                            <input type="radio" name="model" value="model" class="radioB">
+                        </label>
+                        <img src="img/checked.png" class="checkedSignal">
+                    </div>
+                    
+                    <div class ="pictureLeft" onclick=showImg(0)>
+                        <a href="img/tortaCh%C3%A1Beb%C3%AA.jpg" data-lightbox="mygallery">
+                            <img class="zoom" src="img/zoomImg.png">
+                        </a>
+                        <label>
+                            <img src="img/tortaCh%C3%A1Beb%C3%AA.jpg" class="smallImage">
+                            <input type="radio" name="model" value="model" class="radioB">
+                        </label>
+                        <img src="img/checked.png" class="checkedSignal">
+                    </div>
+                    
+                    <div class="pictureRight" onclick=showImg(0)>
+                        <a href="img/tortaDoces.jpg" data-lightbox="mygallery">
+                            <img class="zoom" src="img/zoomImg.png">
+                        </a>
+                        <label>
+                            <img src="img/tortaDoces.jpg" class="smallImage">
+                            <input type="radio" name="model" value="model" class="radioB">
+                        </label>
+                        <img src="img/checked.png" class="checkedSignal">
+                    </div>
+                    
+                </div>
+                
+                 <input type="button" name="Próximo" class="nextActionButton" value="Próximo" disabled><br>
+                
+            <!--Final do fieldset1 com progress bar-->
+            </fieldset>
+            
+            <fieldset id="field2">
+            <!--Início do fieldset2 com progress bar-->
+                <div class="containerHeader">
+                    <div class="formHeader">
+                        <h2 class="fsTitle">Tamanho e massa</h2>
+                    </div>
+                    
+                    <div class="hint" id="hint2">
+                        <p>?</p>
+                    </div>
+                </div>
+                
+                <div id="sizes">
+                    <div id="size15" class="size" onclick="changeImg();toRadio(0);">
+                        <label>
+                            <img src="img/size_15.png" id="img15" class="size_img">
+                            <input type="checkbox" name="size_cbox" value="size15" class="cbox">
+                        </label>
+                    </div>
+
+                    <div id="size20" class="size" onclick="changeImg();toRadio(1);">
+                        <label>
+                            <img src="img/size_20.png" id="img20" class="size_img">
+                            <input type="checkbox" name="size_cbox" value="size20" class="cbox">
+                        </label>
+                    </div>
+
+                    <div id="size25" class="size" onclick="changeImg();toRadio(2);">
+                        <label>
+                            <img src="img/size_25.png" id="img25" class="size_img">
+                            <input type="checkbox" name="size_cbox" value="size25" class="cbox">
+                        </label>
+                    </div>
+
+                    <div id="size30" class="size" onclick="changeImg();toRadio(3);">
+                        <label>
+                            <img src="img/size_30.png" id="img30" class="size_img">
+                            <input type="checkbox" name="size_cbox" value="size30" class="cbox">
+                        </label>
+                    </div>
+
+                    <div id="size35" class="size" onclick="changeImg();toRadio(4);">
+                        <label>
+                            <img src="img/size_35.png" id="img35" class="size_img">
+                            <input type="checkbox" name="size_cbox" value="size35" class="cbox">
+                        </label>
+                    </div>
+
+                    <div id="size45" class="size" onclick="changeImg();toRadio(5);">
+                        <label>
+                            <img src="img/size_45.png" id="img45" class="size_img">
+                            <input type="checkbox" name="size_cbox" value="size45" class="cbox">
+                        </label>
+                    </div>
+                </div>
+                
+                <h3 id="floor_label">Quantidade de andares</h3>
+                
+                <div id="container_picker">
+                    <select id="floor_select" class="selectpicker" onchange="showFloors()">
+                        <option value="1" selected>1 andar</option>
+                        <option value="2">2 andares</option>
+                        <option value="3">3 andares</option>
+                    </select>
+                </div>
+                
+                <div id="floors_picker">
+                    <div class="floor" id="first_floor">
+                        <input id="radio_floor_1" name="radio" class="radio_floor" type="radio" checked>
+                        <label for="radio_floor_1">1º andar</label>
+                    </div>
+                    <div class="floor" id="second_floor">
+                        <input id="radio_floor_2" name="radio" class="radio_floor" type="radio">
+                        <label for="radio_floor_2">2º andar</label>
+                    </div>
+                    <div class="floor" id="third_floor">
+                        <input id="radio_floor_3" name="radio" class="radio_floor" type="radio">
+                        <label for="radio_floor_3">3º andar</label>
+                    </div>
+                </div>
+                
+                <input type="button" name="Anterior" class="prevActionButton" value="Anterior" />
+                <input type="button" name="Próximo" class="nextActionButton" value="Próximo" />
+                
+            <!--Final do fieldset2 com progress bar-->
+            </fieldset>
+            
+            <fieldset id="field3">
+            <!--Início do fieldset3 com progress bar-->
+                <div class="containerHeader">
+                    <div class="formHeader">
+                        <h2 class="fsTitle">Ingredientes</h2>
+                    </div>
+                    
+                    <div class="hint" id="hint3">
+                        <p>?</p>
+                    </div>
+                </div>
+                
+                <input type="button" name="Anterior" class="prevActionButton"  value="Anterior" />
+                <input type="button" name="Próximo" class="nextActionButton" value="Próximo" />
+                
+            <!--Final do fieldset3 com progress bar-->
+            </fieldset>
+            
+            <fieldset id="field4">
+            <!--Início do fieldset4 com progress bar-->
+                <div class="containerHeader">
+                    <div class="formHeader">
+                        <h2 class="fsTitle">Dados finais</h2>
+                    </div>
+                    
+                    <div class="hint" id="hint4">
+                        <p>?</p>
+                    </div>
+                </div>
+                
+                <input type="button" name="Anterior" class="prevActionButton" value="Anterior" />
+                <input type="submit" name="Finalizar" class="submit" value="Finalizar" />
+            <!--Final do fieldset4 com progress bar-->
+            </fieldset>
+        </form>
+        
+        <!--jQuery-->
+        <script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="application/javascript"></script>
+        <script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="application/javascript"></script>
+        <script src="js/montagemAction.js" type="application/javascript"></script>
+        <script type="text/javascript" src="js/check.js"></script>
+        <script type="text/javascript" src="js/lightbox.js"></script>
+        <script type="text/javascript" src="js/floor.js"></script>
+    </body>
+</html>

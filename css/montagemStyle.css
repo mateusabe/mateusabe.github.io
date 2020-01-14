@@ -1,0 +1,296 @@
+/*Estilização da página*/
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    background-color: antiquewhite;
+}
+
+/*Começo da estilização do formulário+progressbar*/
+#msForm{
+    width:100%;
+    margin: 6vw auto;
+    text-align: left;
+}
+
+#msForm fieldset{
+    background: white;
+    border: 0 none;
+    box-shadow: 1vw 1vw 2vw gray;
+    padding: 4.5vw 2vh;
+    box-sizing: border-box;
+}
+
+#msForm fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*Títulos do formulário*/
+.fsTitle{
+    font-size: 2rem;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    color: #ff808d;
+}
+
+/*Progressbar*/
+#progressbar{
+    margin-bottom: 2vh;
+    overflow: hidden;
+    counter-reset: step;
+}
+
+#progressbar li {
+    color: brown;
+    width: 25%;
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    position:relative;
+}
+
+#progressbar li:before {
+    content:counter(step);
+    counter-increment: step;
+    width: 6vw;
+    line-height: 6vw;
+    display: block;
+    font-size: 5vw;
+    font-family: 'Titillium Web', sans-serif;
+    color: #333;
+    background: white;
+    border-radius: 8%;
+    margin: 0 auto 5% auto;
+}
+
+#progressbar li:after {
+    content:"";
+    width: 100%;
+    height: 8%;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 36%;
+    top: 36%;
+    z-index:-1
+}
+
+#progressbar li:first-child:after {
+    content:none;
+}
+
+#progressbar li.active:before,#progressbar li.active:after {
+    background: #27AE60;
+    color: white;
+}
+
+/*Estilizaçao de botões*/
+#msForm input{
+    padding: 3vw 4.5vw;
+    margin-top: 5vh;
+    background-color: #ff808d;
+    color: #ffe3e6;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 4vw;
+    border: 2.5px solid #ff808d;
+    border-radius: 1.2vw;
+    cursor: pointer;
+    position: relative;
+}
+
+#msForm .nextActionButton, .submit{
+    float: right;
+}
+
+#msForm .prevActionButton{
+    float: left;
+}
+
+/*Galeria de imagens de torta*/
+#gallery{
+    margin: auto;
+    overflow: auto;
+    height: 70vh;
+    position: relative;
+    width: 90vw;
+}
+.pictureLeft, .pictureRight{
+    position: relative;
+    height: 23vh;
+    width: 44vw;
+    padding-bottom: 4vh;
+}
+.pictureLeft{
+    float: left;
+}
+.pictureRight{
+    float:right;
+}
+a{
+    text-decoration: none;
+}
+.smallImage{
+    width: 101%;
+}
+
+/*Botões de seleção*/
+#gallery input[type="radio"]{
+    display: none;
+    z-index: 5;
+}
+
+.checkedSignal{
+    z-index: 10;
+    position: absolute;
+    top:0;
+    width: 1.7em;
+    visibility: hidden;
+}
+
+.zoom{
+    position: absolute;
+    top:60%;
+    left:70%;
+    margin-top:-50px;
+    margin-left:-50px;
+    opacity: 0;
+}
+
+.containerHeader{
+    display: flex;
+    align-items: center;
+}
+
+.hint{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #ff808d;
+    float: left;
+    margin-left: 0.7em;
+    position: relative;
+}
+.hint p{
+    font-size: 1.5rem;
+    font-style: bold;
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-family: 'PT Sans', sans-serif;
+    align-items: center;
+    justify-content: center ;
+}
+
+/*Tamanhos das tortas*/
+#sizes{
+    margin: 4em auto;
+    text-align: center;
+}
+.size{
+    margin-bottom: -1.5em;
+    position: relative;
+}
+#size15{
+    z-index: 7;
+}
+#size20{
+    z-index: 6;
+}
+#size25{
+    z-index: 5;
+}
+#size30{
+    z-index: 4;
+}
+#size35{
+    z-index: 3;
+}
+#size45{
+    z-index: 2;
+}
+.size_img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#img15{
+    width: 25%;
+}
+#img20{
+    width: 33%;
+}
+#img25{
+    width: 42%;
+}
+#img30{
+    width: 50%;
+}
+#img35{
+    width: 58%;
+}
+#img45{
+    width: 75%;
+}
+#sizes input[type="radio"]{
+    display: none;
+}
+               
+#radios_filling{
+    margin: 2em auto;
+    font-family: 'Crete Round', serif;
+    font-size: 1em;
+    color: #ff9b9b;
+}
+
+#radios_filling{
+    margin: 2em auto;
+    font-family: 'Crete Round', serif;
+    font-size: 1em;
+    color: #ff9b9b;
+}
+#field3 h3{
+    margin-bottom: 0.5em;
+    font-family: 'Crete Round', serif;
+    font-size: 1.1em;
+    color: #ff9b9b;
+}
+
+.selectpicker{
+    border-radius: 0.5em;
+}
+
+#floor_select{
+    width: 28vw;
+    height: 3.5vh;
+    font-size: 1em;
+    margin: 0.8em 1em;
+}
+
+#floor_select option{
+    font-size: 0.8em;
+    padding-left: -0.5em;
+}
+
+#field3 .container{
+    margin: 0 auto 1em;
+}
+
+.floor{
+    margin: 1em auto;
+    width: 60vw;
+}
+#floors_picker{
+    display: inline-block;
+    margin-top: 0.4em;
+    margin-left: 0.4em;
+}
+#floor_label{
+    margin-left: 0.6em;
+}
+#second_floor{
+    display: none;
+}
+#third_floor{
+    display: none;
+}
