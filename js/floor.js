@@ -1,5 +1,5 @@
 var checkboxes = document.getElementsByClassName('cbox');
-var radiosFloor = document.getElementsByClassName('floor');
+var options = document.getElementById("floor_select");
 
 function toRadio(index) {
     for(var i=0; i<checkboxes.length; i++) {
@@ -10,27 +10,28 @@ function toRadio(index) {
     }
 }
 
-function showFloors(){
-    var select = document.getElementById('floor_select').value;
-    
-    if(select == 1){
-        firstOption();
+function toRadioFloor(index) {
+    if(index == 0){
+        options.options[1].disabled = false;
+        if(!options.options[2].disabled)
+            options.options[2].disabled = true;
+        if(!options.options[3].disabled)
+            options.options[3].disabled = true;
     }
-    else if(select == 2)
-        secondOption();
-    else if(select == 3)
-        thirdOption();
-}
-
-function firstOption(){
-    radiosFloor[1].style.display = "none";
-    radiosFloor[2].style.display = "none";
-}
-function secondOption(){
-    radiosFloor[1].style.display = "inline-block";
-    radiosFloor[2].style.display = "none";
-}
-function thirdOption(){
-    radiosFloor[1].style.display = "inline-block";
-    radiosFloor[2].style.display = "inline-block";
+    else if(index == 1){
+        options.options[2].disabled = false;
+        if(!options.options[3].disabled)
+            options.options[3].disabled = true;
+        if(options.options[2].disabled)
+            options.options[2].disabled = false;
+        if(options.options[1].disabled)
+            options.options[1].disabled = false;
+    }
+    else if(index >= 2){
+        options.options[3].disabled = false;
+        if(options.options[2].disabled)
+            options.options[2].disabled = false;
+        if(options.options[1].disabled)
+            options.options[1].disabled = false;
+    }    
 }
