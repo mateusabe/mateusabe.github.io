@@ -252,15 +252,15 @@ a{
 
 #radios_filling{
     margin: 2em auto;
-    font-family: 'Crete Round', serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 1em;
-    color: #ff9b9b;
+    color: #4799cc;
 }
-#field3 h3{
+#floor_label{
     margin-bottom: 0.5em;
-    font-family: 'Crete Round', serif;
-    font-size: 1.1em;
-    color: #ff9b9b;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    color: #ff808d;
 }
 
 .selectpicker{
@@ -287,17 +287,53 @@ a{
     margin: 1em auto;
     width: 60vw;
 }
+
 #floors_picker{
     display: inline-block;
     margin-top: 0.4em;
     margin-left: 0.4em;
 }
+
 #floor_label{
     margin-left: 0.6em;
 }
+
 #second_floor{
     display: none;
 }
+
 #third_floor{
     display: none;
+}
+
+#select_recheio{
+    margin-bottom: 5em;
+}
+
+#select_recheio .filling{
+    margin: -2em 0;
+}
+
+#select_recheio h3{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.5em;
+    color: #ff7272;
+    margin: 01em 0 -2.3em 0;
+}
+
+
+#double_filling {
+    width: 50vw;
+    margin: 0.8em auto 2em;
+    position: relative;
+}
+
+#main_label{
+    position: relative;
+    top: -0.555em;
+    left: 0.5em;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color:#ff7272;
 }

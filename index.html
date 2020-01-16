@@ -12,6 +12,7 @@
         <meta http-equiv="content-language" content="pt-br" />
         <meta name="generator" content="Brackets" />
         <meta name="rating" content="general" />
+        <meta name="format-detection" content="telephone=no">
         
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
@@ -21,6 +22,7 @@
         <link type="text/css" rel="stylesheet" href="css/lightbox.css">
         <link type="text/css" rel="stylesheet" href="css/checkbox.css">
         <link type="text/css" rel="stylesheet" href="css/sizesRadio.css">
+        <link type="text/css" rel="stylesheet" href="css/radioFilling.css">
     </head>
 
     <body>
@@ -136,42 +138,42 @@
                 </div>
                 
                 <div id="sizes">
-                    <div id="size15" class="size" onclick="changeImg();toRadio(0);">
+                    <div id="size15" class="size" onclick="changeImg();toRadio(0);toRadioFloor(0);">
                         <label>
                             <img src="img/size_15.png" id="img15" class="size_img">
                             <input type="checkbox" name="size_cbox" value="size15" class="cbox">
                         </label>
                     </div>
 
-                    <div id="size20" class="size" onclick="changeImg();toRadio(1);">
+                    <div id="size20" class="size" onclick="changeImg();toRadio(1);toRadioFloor(1);">
                         <label>
                             <img src="img/size_20.png" id="img20" class="size_img">
                             <input type="checkbox" name="size_cbox" value="size20" class="cbox">
                         </label>
                     </div>
 
-                    <div id="size25" class="size" onclick="changeImg();toRadio(2);">
+                    <div id="size25" class="size" onclick="changeImg();toRadio(2);toRadioFloor(2);">
                         <label>
                             <img src="img/size_25.png" id="img25" class="size_img">
                             <input type="checkbox" name="size_cbox" value="size25" class="cbox">
                         </label>
                     </div>
 
-                    <div id="size30" class="size" onclick="changeImg();toRadio(3);">
+                    <div id="size30" class="size" onclick="changeImg();toRadio(3);toRadioFloor(3);">
                         <label>
                             <img src="img/size_30.png" id="img30" class="size_img">
                             <input type="checkbox" name="size_cbox" value="size30" class="cbox">
                         </label>
                     </div>
 
-                    <div id="size35" class="size" onclick="changeImg();toRadio(4);">
+                    <div id="size35" class="size" onclick="changeImg();toRadio(4);toRadioFloor(4);">
                         <label>
                             <img src="img/size_35.png" id="img35" class="size_img">
                             <input type="checkbox" name="size_cbox" value="size35" class="cbox">
                         </label>
                     </div>
 
-                    <div id="size45" class="size" onclick="changeImg();toRadio(5);">
+                    <div id="size45" class="size" onclick="changeImg();toRadio(5);toRadioFloor(5);">
                         <label>
                             <img src="img/size_45.png" id="img45" class="size_img">
                             <input type="checkbox" name="size_cbox" value="size45" class="cbox">
@@ -183,25 +185,11 @@
                 
                 <div id="container_picker">
                     <select id="floor_select" class="selectpicker" onchange="showFloors()">
-                        <option value="1" selected>1 andar</option>
-                        <option value="2">2 andares</option>
-                        <option value="3">3 andares</option>
+                        <option value="0" selected>---</option>
+                        <option value="1" disabled>1 andar</option>
+                        <option value="2" disabled>2 andares</option>
+                        <option value="3" disabled>3 andares</option>
                     </select>
-                </div>
-                
-                <div id="floors_picker">
-                    <div class="floor" id="first_floor">
-                        <input id="radio_floor_1" name="radio" class="radio_floor" type="radio" checked>
-                        <label for="radio_floor_1">1º andar</label>
-                    </div>
-                    <div class="floor" id="second_floor">
-                        <input id="radio_floor_2" name="radio" class="radio_floor" type="radio">
-                        <label for="radio_floor_2">2º andar</label>
-                    </div>
-                    <div class="floor" id="third_floor">
-                        <input id="radio_floor_3" name="radio" class="radio_floor" type="radio">
-                        <label for="radio_floor_3">3º andar</label>
-                    </div>
                 </div>
                 
                 <input type="button" name="Anterior" class="prevActionButton" value="Anterior" />
@@ -212,6 +200,7 @@
             
             <fieldset id="field3">
             <!--Início do fieldset3 com progress bar-->
+                
                 <div class="containerHeader">
                     <div class="formHeader">
                         <h2 class="fsTitle">Ingredientes</h2>
@@ -221,6 +210,49 @@
                         <p>?</p>
                     </div>
                 </div>
+                
+                <div class="container">
+
+                    <div class="select_box" id="select_recheio">
+                        <h3>Recheio</h3>
+                        
+                        <div id="radios_filling">
+                            <div class="filling">
+                                <input id="radio1" name="radio" class="radio_filling" type="radio" onclick="enableButtonIngredients()">
+                                <label for="radio1" class="label_radio" id="label1">Chocolate Intenso</label>
+                            </div>
+
+                            <div class="filling">
+                                <input id="radio2" name="radio" class="radio_filling" type="radio" onclick="enableButtonIngredients()">
+                                <label for="radio2" class="label_radio" id="label2">Crock</label>
+                            </div>
+
+                            <div class="filling">
+                                <input id="radio3" name="radio" class="radio_filling" type="radio" class="radio_filling" onclick="enableButtonIngredients()">
+                                <label for="radio3" class="label_radio" id="label3">Ninho Cremoso</label>
+                            </div>
+
+                            <div class="filling">
+                                <input id="radio4" name="radio" class="radio_filling" type="radio" onclick="enableButtonIngredients()">
+                                <label for="radio4" class="label_radio" id="label4">Oreo</label>
+                            </div>
+
+                            <div class="filling">
+                                <input id="radio5" name="radio" class="radio_filling" type="radio" onclick="enableButtonIngredients()">
+                                <label for="radio5" class="label_radio" id="label5">Paixão</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="double_filling">
+                        <input type="checkbox" id="cbtest" />
+                        <label for="cbtest" class="check-box"></label> 
+                        <label id="main_label">Recheio em dobro</label>  
+                    </div>
+                </div>
+                
+                <div class="select_box" id="select_recheio">
+                        <h3>Massa</h3>
                 
                 <input type="button" name="Anterior" class="prevActionButton"  value="Anterior" />
                 <input type="button" name="Próximo" class="nextActionButton" value="Próximo" />
