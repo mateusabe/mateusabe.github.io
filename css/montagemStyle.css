@@ -102,9 +102,9 @@ html{
 
 #msForm input:disabled,
 #msForm input[disabled]{
-    color: darkgray;
-    background-color: gray;
-    border-color: gray;
+    color: gray;
+    background-color: darkgray;
+    border-color: darkgray;
 }
 
 #msForm .nextActionButton, .submit{
@@ -324,16 +324,26 @@ a{
 
 #double_filling {
     width: 50vw;
-    margin: 0.8em auto 2em;
+    margin: 0.8em 2em 2em 2em;
     position: relative;
 }
 
+#select_massa h3{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.5em;
+    color: #ff7272;
+    margin: 01em 0 -0.3em 0;
+}
+
+#batterRadios {
+    margin-bottom: 2em;
+}
 #main_label{
     position: relative;
     top: -0.555em;
     left: 0.5em;
     font-family: 'PT Sans', sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 700;
     color:#ff7272;
 }

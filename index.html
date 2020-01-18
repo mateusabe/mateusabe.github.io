@@ -23,6 +23,7 @@
         <link type="text/css" rel="stylesheet" href="css/checkbox.css">
         <link type="text/css" rel="stylesheet" href="css/sizesRadio.css">
         <link type="text/css" rel="stylesheet" href="css/radioFilling.css">
+        <link type="text/css" rel="stylesheet" href="css/batterStyle.css">
     </head>
 
     <body>
@@ -251,9 +252,26 @@
                     </div>
                 </div>
                 
-                <div class="select_box" id="select_recheio">
+                <div class="select_box" id="select_massa">
                         <h3>Massa</h3>
                 </div>
+                
+                <ul id="batterList">
+                
+                    <li id="chocoLi">
+                        <input type="radio" id="choco" name="selector" value="chocolate">
+                        <label for="choco">Chocolate</label>
+                        
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="vanilla" name="selector" value="baunilha">
+                        <label for="vanilla">Baunilha</label>
+                        
+                        <div class="check"></div>
+                    </li>
+                    
+                </ul>
                 
                 <input type="button" name="Anterior" class="prevActionButton"  value="Anterior" />
                 <input type="button" name="Próximo" class="nextActionButton" value="Próximo" />
