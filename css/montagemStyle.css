@@ -347,3 +347,50 @@ a{
     font-weight: 700;
     color:#ff7272;
 }
+
+#dateContainer label, #coments_label, #delivery_choices #delivery_label,#floor_label{
+    font-family: 'Concert One', cursive;
+    font-size: 1.5em;
+}
+#dateContainer{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 45vw;
+}
+#field4 p{
+    font-size: 1.4em;
+}
+#date{
+    font-size: 1em;
+    width: 45vw;
+    border-radius: 0.2em;
+    font-family: monospace;
+}
+#coments{
+    text-align: justify;
+    margin-top: 1em;
+}
+
+#coments_label{
+    font-size: 18px; 
+    font-size: 1.5em;
+}
+#text_fields{
+    width: 60vw;
+    margin: 2em auto 2em;
+}
+textarea{
+    font-size: 1.3em;
+    text-align: left;
+    border-radius: 0.1em;
+}
+#textarea_feedback{
+    font-family: sans-serif;
+    color: #848484;
+}
+#delivery_choices{
+    margin-top: 1em;
+}
+#delivery_choices .container{
+    margin-top: 1em;
+}

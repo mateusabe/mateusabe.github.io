@@ -24,6 +24,7 @@
         <link type="text/css" rel="stylesheet" href="css/sizesRadio.css">
         <link type="text/css" rel="stylesheet" href="css/radioFilling.css">
         <link type="text/css" rel="stylesheet" href="css/batterStyle.css">
+        <link rel="stylesheet" href="css/jquery-ui-themes-1.12.1/themes/jquery-ui.css">
     </head>
 
     <body>
@@ -291,6 +292,122 @@
                     </div>
                 </div>
                 
+                 <div id="text_fields">
+                    <div id="dateContainer">
+                        <label>Data</label>
+                        <p><input type="text" name="date" id="date" size="10" maxlength="10" onkeydown="return false" onchange="enableButtonFinish()"></p>
+                    </div>
+
+                    <div id="textarea_container">
+                        <label id="coments_label">Comentários</label>
+                        <textarea placeholder="Comente aqui..." rows="7" cols="27" name="detalhes" id="coments" maxlength="300"></textarea>
+                        <div id="textarea_feedback"></div>
+                    </div>
+                    
+                    <div id="delivery_choices">
+                        <label id="delivery_label">Forma de entrega</label>
+                        <div class="container">
+                        <div class="radio">
+                            <input id="radio-1" name="radio" type="radio" onclick="hideDiv('delivery');enableButtonFinish();">
+                            <label for="radio-1" class="radio_label">Entrega (somente em Feira de Santana)</label>
+                          </div>
+
+                          <div class="radio">
+                            <input id="radio-2" name="radio" type="radio" onclick="hideDiv('nulo');enableButtonFinish();">
+                            <label  for="radio-2" class="radio_label">Busca</label>
+                          </div>
+                        </div>
+                        
+                        <div id="Entrega">
+                            <label>Bairro</label>
+                            <select class="selectpicker" onmousedown="if(this.options.length>6){this.size=6;}" onchange='this.size=0;enableButtonFinish();' required>
+                                <option value="" disabled selected>---</option>
+                                <option value="1">35º BI</option>
+                                <option value="2">35º Bloco</option>
+                                <option value="3">Aeroporto</option>
+                                <option value="4">Asa Branca</option>
+                                <option value="5">Aviário</option>
+                                <option value="6">Baraúna</option>
+                                <option value="7">Brasília</option>
+                                <option value="8">Calumbi</option>
+                                <option value="9">Campo do Gado Novo</option>
+                                <option value="10">Campo Gado</option>
+                                <option value="11">Campo Gado Novo</option>
+                                <option value="12">Campo Limpo</option>
+                                <option value="13">Capuchinhos</option>
+                                <option value="14">Caseb</option>
+                                <option value="15">Cedin</option>
+                                <option value="16">Centenário</option>
+                                <option value="17">Centro</option>
+                                <option value="18">Centro Industrial Subae</option>
+                                <option value="19">Chácara São cosme</option>
+                                <option value="20">Cidade Nova</option>
+                                <option value="21">Cis</option>
+                                <option value="22">Conceição</option>
+                                <option value="23">Conjunto Centenário</option>
+                                <option value="24">Conjunto Feira IV</option>
+                                <option value="25">Conjunto Feira Vila</option>
+                                <option value="26">Conjunto Feira X</option>
+                                <option value="27">Conjunto Homero Figueiredo</option>
+                                <option value="28">Conjunto João Paulo II</option>
+                                <option value="29">Conjunto Jomafa</option>
+                                <option value="30">Coronel José Pinto</option>
+                                <option value="31">Cruzeiro</option>
+                                <option value="32">Dner</option>
+                                <option value="33">Estação Nova</option>
+                                <option value="34">Estrada Nova</option>
+                                <option value="35">Eucalipto</option>
+                                <option value="36">Gabriela</option>
+                                <option value="37">Jardim Acácia</option>
+                                <option value="38">Jardim Cruzeiro</option>
+                                <option value="39">Jardim Sucupira</option>
+                                <option value="40">Kalilândia</option>
+                                <option value="41">Lagoa Grande</option>
+                                <option value="42">Lagoa Salgada</option>
+                                <option value="43">Lagoa Salgada</option>
+                                <option value="44">Lagoa Subae</option>
+                                <option value="45">Limoeiro</option>
+                                <option value="46">Loteamento Ouro Verde</option>
+                                <option value="47">Mangabeira</option>
+                                <option value="48">Mar Tranquilidade</option>
+                                <option value="49">Muchila</option>
+                                <option value="50">Nova Esperança</option>
+                                <option value="51">Novo Horizonte</option>
+                                <option value="52">Olhos D'água</option>
+                                <option value="53">Pampalona</option>
+                                <option value="54">Papagaio</option>
+                                <option value="55">Parque Ecologista Lagoa Subaeento</option>
+                                <option value="56">Parque Getúlio Vargas</option>
+                                <option value="57">Parque Ipe</option>
+                                <option value="58">Pedra do Descanso</option>
+                                <option value="59">Pedra Ferrada</option>
+                                <option value="60">Pilão</option>
+                                <option value="61">Pintor Central</option>
+                                <option value="62">Ponto Central</option>
+                                <option value="63">Queimadinha</option>
+                                <option value="64">Rua Nova</option>
+                                <option value="65">Santa Mônica</option>
+                                <option value="66">Serraria Brasil</option>
+                                <option value="67">Sim</option>
+                                <option value="68">Sítio Novo</option>
+                                <option value="69">Sobradinho</option>
+                                <option value="70">Subae</option>
+                                <option value="71">Subae Tanquinho</option>
+                                <option value="72">Tanque Nação</option>
+                                <option value="73">Tomba</option>
+                                <option value="74">Vila Gabriela</option>
+                                <option value="75">Zona Rural</option>
+                            </select>
+                            
+                            <label>Rua</label>
+                            <input type="text" name="street" id="street" onchange="enableButtonFinish()">
+                            
+                            <label>Complemento</label>
+                            <textarea rows="3" cols="27" name="detalhes" id="complement" maxlength="300" onchange="enableButtonFinish()"></textarea>
+                        </div>
+                    </div>
+                </div>
+                
                 <input type="button" name="Anterior" class="prevActionButton" value="Anterior" />
                 <input type="submit" name="Finalizar" class="submit" value="Finalizar" />
             <!--Final do fieldset4 com progress bar-->
@@ -306,5 +423,8 @@
         <script type="text/javascript" src="js/check.js"></script>
         <script type="text/javascript" src="js/lightbox.js"></script>
         <script type="text/javascript" src="js/floor.js"></script>
+        <script type="text/javascript" src="js/date.js"></script>
+        <script type="text/javascript" src="js/textarea.js"></script>
+        <script type="text/javascript" src="js/hideDiv.js"></script>
     </body>
 </html>
