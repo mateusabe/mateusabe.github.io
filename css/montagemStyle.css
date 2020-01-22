@@ -87,7 +87,7 @@ html{
 }
 
 /*Estilizaçao de botões*/
-#msForm input{
+#msForm .nextActionButton, #msForm .prevActionButton, #msForm .submit{
     padding: 3vw 4.5vw;
     margin-top: 5vh;
     background-color: #ff808d;
@@ -348,9 +348,14 @@ a{
     color:#ff7272;
 }
 
+#date, #street{
+    background-color:  aliceblue;
+}
+
 #dateContainer label, #coments_label, #delivery_choices #delivery_label,#floor_label{
-    font-family: 'Concert One', cursive;
+    font-family: 'PT Sans', sans-serif;
     font-size: 1.5em;
+    font-weight: 700;
 }
 #dateContainer{
     margin-top: 1em;
