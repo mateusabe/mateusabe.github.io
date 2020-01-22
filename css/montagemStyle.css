@@ -87,7 +87,7 @@ html{
 }
 
 /*Estilizaçao de botões*/
-#msForm .nextActionButton, #msForm .prevActionButton, #msForm .submit{
+#msForm input[type=button], #msForm input[type=radio], #msForm input[type=checkbox], input[type=submit]{
     padding: 3vw 4.5vw;
     margin-top: 5vh;
     background-color: #ff808d;
