@@ -1,0 +1,269 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+.center{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.header{
+    padding: 0 2%;
+    width: 100%;
+    height: 60px;
+    background-color: #212342;
+}
+
+.header img{
+    margin: 19px;
+}
+
+.containerBanner > .center{
+    height: 100%;
+}
+
+.containerBanner{
+    min-width: 100%;
+    padding: 0 2%;
+    width: 100%;
+    height: 557px;
+    background-image: url('../images/header_bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.form{
+    padding: 10px;
+    width: 400px;
+    height: calc(100% + 30px);
+    float: right;
+    position: relative;
+    top: -15px;
+    border: 8px solid #ccc;
+    border-color: rgba(120, 120, 120, .5);
+    background-color: white;
+    color: #999999;
+    background-clip: padding-box;
+    /*Background-origin serve para imagem*/
+}
+
+.form h2{
+    font-weight: normal;
+    font-size: 21px;
+}
+
+.inputContainer{
+    margin-top: 20px;
+}
+
+.inputContainer span,.form p{
+    display: inline-block;
+    width: 100%;
+    font-size: 17px;
+}
+
+.form p{
+    margin: 20px 0;
+}
+
+.inputContainer input[type="text"]{
+    margin-top: 8px;
+    width: 344px;
+    height: 55px;
+    border: 1px solid #ccc;
+}
+
+.inputSubmit{
+    text-align: center;
+}
+
+.form input[type=submit]{
+    color: white;
+    font-size: 25px;
+    width:280px;
+    height: 56px;
+    background-color: #363A6D;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 5px solid #4a5097;
+    cursor:pointer;
+}
+
+.form input[type=submit]:hover{
+    background-color: #323665;
+}
+
+.containerList{
+    padding: 30px;
+    float: left;
+    width: 519px;
+    height: 270px;
+    margin-top: 100px;
+    background-color: rgba(33, 35, 67, .7);
+}
+
+.containerList ul{
+    list-style-position: inside;
+}
+
+.containerList ul li{
+    margin-top: 22px;
+    color: white;
+}
+
+.container2{
+    min-width: 100%; 
+    padding: 40px 2%;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.container2 h2{
+    font-weight: normal;
+}
+
+.container2 p{
+    width: 100%;
+    max-width: 768px;
+    display: inline-block;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+.arrow{
+    position: relative;
+    top: 60px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/arrow.png);
+    background-size: 100% 100%;
+}
+
+.section1{
+    padding: 90px 2%;
+}
+
+.section1 h2{
+    text-align: center;
+    color: #462663;
+    font-weight: normal;
+}
+
+.containerSection{
+    margin-top: 40px;
+}
+
+.containerSection{
+    text-align: center;
+}
+
+.containerSingle{
+    width: 33.333%;
+    float: left;
+    padding: 30px;
+}
+
+.containerSingle p{
+    display: inline-block;
+    text-align: justify;
+    padding: 10px 25px;
+}
+
+.containerSingle img{
+    width: 70px;
+}
+
+.footer{
+    border-top: 2px solid #888888;
+    padding: 20px 0;
+    text-align: center;
+    color: #888;
+}
+
+.footer p{
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 1024px){
+    .header{
+        height: auto;
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .header img{
+        margin:0;
+    }
+
+    .containerBanner{
+        width: 100%;
+        height: auto;
+        padding: 40px 2%;
+    }
+
+    .form{
+        position: static;
+        /*display: inline-block;*/
+        margin:2% auto;
+        max-width: 400px;
+        min-width: 400px;
+        padding: 10px;
+        width: 90%;
+        height: 100%;
+        float: none;
+        top: 0;
+    }
+
+    .containerList{
+        margin:0 auto;
+        padding: 30px;
+        float: none;
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .containerSection{
+        display: inline-block;
+    }
+    
+    .containerSingle{
+        margin: 0 auto;
+        width: 90%;
+        float: none;
+        padding: 30px;
+    }
+
+    @media screen and (max-width:399){
+        .form{
+            max-width: 300px;
+            width: 90%;
+            height: 100%;
+        }
+
+        .inputContainer input[type="text"]{
+            margin-top: 8px;
+            width: 280px;
+            height: 55px;
+            border: 1px solid #ccc;
+        }
+    }
+}
+
